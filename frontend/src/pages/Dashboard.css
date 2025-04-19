@@ -1,0 +1,236 @@
+/* Dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #00b4d8;
+  --dark-blue: #003f7d;
+  --light-gray: #f2f4f8;
+  --card-bg: #ffffff;
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: var(--light-gray);
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background: linear-gradient(135deg, var(--dark-blue), var(--primary-color));
+  color: #fff;
+  width: 260px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar .brand h2 {
+  margin: 0 0 40px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar nav ul li:hover,
+.sidebar nav ul li a:hover {
+  opacity: 0.8;
+}
+.consumption-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mini-box {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.mini-box:hover {
+  transform: scale(1.03);
+}
+
+.mini-box h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.mini-box p {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.current-month {
+  background-color: #e3f2fd;
+}
+
+.last-15-days {
+  background-color: #fff8e1;
+}
+
+.prediction {
+  background-color: #e8f5e9;
+}
+  
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.main-header h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.main-header p {
+  color: #666;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+/* Cards container */
+.info-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  flex: 1 1 300px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--dark-blue);
+}
+
+.card p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+/* Bill generator section */
+.bill-generator {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.generate-button,
+.send-email-button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
+  margin: 0 10px;
+}
+
+.generate-button:hover,
+.send-email-button:hover {
+  background: var(--dark-blue);
+  transform: scale(1.02);
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .info-cards {
+    flex-direction: column;
+  }
+}

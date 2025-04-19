@@ -1,0 +1,40 @@
+/* src/pages/Complaint.css */
+.complaint-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  button {
+    padding: 10px 20px;
+    background: #00b4d8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .complaint-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .complaint-list li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  .message {
+    color: green;
+    font-weight: bold;
+  }
+  

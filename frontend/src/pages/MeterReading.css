@@ -1,0 +1,55 @@
+/* src/pages/MeterReading.css */
+.meter-reading-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.meter-reading-container h2 {
+  text-align: center;
+  color: #003f7d;
+}
+
+.meter-reading-history {
+  margin-top: 20px;
+}
+
+.meter-reading-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.meter-reading-history th,
+.meter-reading-history td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.meter-reading-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.meter-reading-actions button {
+  padding: 10px 20px;
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.meter-reading-actions button:hover {
+  background: #003f7d;
+}
+
+.message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
