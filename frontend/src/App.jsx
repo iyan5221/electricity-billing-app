@@ -43,7 +43,7 @@ function AnimatedRoutes() {
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.3 }}
             >
-              <SignUp />
+              <Signup />
             </motion.div>
           }
         />
