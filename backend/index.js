@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
@@ -32,7 +32,7 @@ app.use('/api/subsidies', require('./routes/subsidies'));
 // Route to call the Flask prediction server
 app.post('/predict', async (req, res) => {
   try {
-    const flaskRes = await fetch('http://127.0.0.1:5001/predict', {
+    const flaskRes = await fetch('http://3.83.13.144:5001/predict', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body),
