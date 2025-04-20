@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 // Import your pages
 import Login from './pages/Login';
-import SignUp from './pages/SignUp';
+import SignUp from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import Complaint from './pages/Complaint';
 import Profile from './pages/Profile';
