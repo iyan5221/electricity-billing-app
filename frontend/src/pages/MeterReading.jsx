@@ -11,7 +11,7 @@ function MeterReading() {
   // Fetch user data (including bills) from the backend
   const fetchUserData = async () => {
     try {
-      const res = await fetch('http://172.31.90.56:3000/api/user/dashboard', {
+      const res = await fetch('http://172.31.90.56:5000/api/user/dashboard', {
         headers: { 'Authorization': 'Bearer ' + token }
       });
       const data = await res.json();
@@ -33,7 +33,7 @@ function MeterReading() {
         setMessage("Please enter a valid consumption value.");
         return;
       }
-      const res = await fetch('http://172.31.90.56:3000/api/meter-reading', {
+      const res = await fetch('http://172.31.90.56:5000/api/meter-reading', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json', 
@@ -56,7 +56,7 @@ function MeterReading() {
   };
   const generateBill = async () => {
     try {
-      const res = await fetch('http://172.31.90.56:3000/api/meter-reading', {
+      const res = await fetch('http://172.31.90.56:5000/api/meter-reading', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json', 
