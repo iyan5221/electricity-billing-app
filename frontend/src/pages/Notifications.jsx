@@ -26,7 +26,7 @@ function Notifications() {
       if (res.ok) {
         setMessage('All notifications marked as read.');
         // Optionally refresh notifications:
-        const refreshed = await fetch('http://localhost:5000/api/notifications', {
+        const refreshed = await fetch('http://3.91.175.161:5000/api/notifications', {
           headers: { 'Authorization': 'Bearer ' + token }
         });
         const refreshedData = await refreshed.json();
