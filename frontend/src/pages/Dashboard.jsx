@@ -57,7 +57,7 @@ function Dashboard() {
   // Existing function to generate a new bill
   const generateBill = async () => {
     try {
-      const res = await fetch('http://172.31.90.56:5000/api/user/bill', {
+      const res = await fetch('http://localhost:5000/api/user/bill', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json', 
@@ -69,7 +69,7 @@ function Dashboard() {
       if (res.ok) {
         setMessage('Bill generated successfully!');
         // Refresh user data
-        const dashboardRes = await fetch('http://172.31.90.56:5000/api/user/dashboard', {
+        const dashboardRes = await fetch('http://localhost:5000/api/user/dashboard', {
           headers: { 'Authorization': 'Bearer ' + token }
         });
         const dashboardData = await dashboardRes.json();
@@ -86,7 +86,7 @@ function Dashboard() {
   // Existing function to send email notification
   const sendEmailNotification = async () => {
     try {
-      const res = await fetch('http://172.31.90.56:5000/api/user/send-bill-email', {
+      const res = await fetch('http://localhost:5000/api/user/send-bill-email', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json', 
