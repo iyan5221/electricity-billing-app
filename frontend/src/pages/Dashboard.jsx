@@ -14,7 +14,7 @@ function Dashboard() {
 
   // Fetch user data from the backend on component mount
   useEffect(() => {
-    fetch('http://172.31.90.56:5000/api/user/dashboard', {
+    fetch('http://localhost:5000/api/user/dashboard', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then((res) => res.json())
