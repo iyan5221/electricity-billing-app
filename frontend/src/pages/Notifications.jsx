@@ -18,7 +18,7 @@ function Notifications() {
 
   const markAllRead = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/notifications/mark-read', {
+      const res = await fetch('http://3.91.175.161:5000/api/notifications/mark-read', {
         method: 'POST',
         headers: { 'Authorization': 'Bearer ' + token }
       });
