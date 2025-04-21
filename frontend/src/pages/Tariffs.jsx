@@ -5,7 +5,7 @@ import './Tariffs.css';
 function Tariffs() {
   const [tariffs, setTariffs] = useState({});
   useEffect(() => {
-    fetch('http://localhost:5000/api/tariffs')
+    fetch('http://172.31.90.56:5000/api/tariffs')
       .then(res => res.json())
       .then(data => setTariffs(data))
       .catch(err => console.error(err));
