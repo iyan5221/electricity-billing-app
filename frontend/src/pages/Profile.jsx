@@ -10,7 +10,7 @@ function Profile() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/account', {
+    fetch('http://3.91.175.161:5000/api/account', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
