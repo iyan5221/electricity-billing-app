@@ -5,7 +5,7 @@ import './Subsidies.css';
 function Subsidies() {
   const [subsidies, setSubsidies] = useState([]);
   useEffect(() => {
-    fetch('http://3.91.175.161:5000/api/subsidies')
+    fetch('http://172.31.90.56:3000/api/subsidies')
       .then(res => res.json())
       .then(data => setSubsidies(data))
       .catch(err => console.error(err));
