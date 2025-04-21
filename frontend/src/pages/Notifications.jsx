@@ -8,7 +8,7 @@ function Notifications() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http://3.91.175.161:5000/api/notifications', {
+    fetch('http://172.31.90.56:3000/api/notifications', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
@@ -18,7 +18,7 @@ function Notifications() {
 
   const markAllRead = async () => {
     try {
-      const res = await fetch('http://3.91.175.161:5000/api/notifications/mark-read', {
+      const res = await fetch('http://172.31.90.56:3000/api/notifications/mark-read', {
         method: 'POST',
         headers: { 'Authorization': 'Bearer ' + token }
       });
@@ -26,7 +26,7 @@ function Notifications() {
       if (res.ok) {
         setMessage('All notifications marked as read.');
         // Optionally refresh notifications:
-        const refreshed = await fetch('http://3.91.175.161:5000/api/notifications', {
+        const refreshed = await fetch('http://172.31.90.56:3000/api/notifications', {
           headers: { 'Authorization': 'Bearer ' + token }
         });
         const refreshedData = await refreshed.json();
