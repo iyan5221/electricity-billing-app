@@ -10,7 +10,7 @@ function Profile() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http://3.91.175.161:5000/api/account', {
+    fetch('http://172.31.90.56:3000/api/account', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
@@ -24,7 +24,7 @@ function Profile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/account', {
+      const res = await fetch('http://172.31.90.56:3000/api/account', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
         body: JSON.stringify(formData)
