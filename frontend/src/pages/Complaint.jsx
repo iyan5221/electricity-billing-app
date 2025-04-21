@@ -10,7 +10,7 @@ function Complaint() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http:/172.31.90.56:3000/api/complaints', {
+    fetch('http:/172.31.90.56:5000/api/complaints', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
@@ -21,7 +21,7 @@ function Complaint() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/complaints', {
+      const res = await fetch('http://172.31.90.56:5000/api/complaints', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
         body: JSON.stringify({ subject: complaintSubject, description: complaintDescription })
@@ -32,7 +32,7 @@ function Complaint() {
         setComplaintSubject('');
         setComplaintDescription('');
         // Refresh complaint list
-        const refreshed = await fetch('http://localhost:5000/api/complaints', {
+        const refreshed = await fetch('http://172.31.90.56:5000/api/complaints', {
           headers: { 'Authorization': 'Bearer ' + token }
         });
         const refreshedData = await refreshed.json();
