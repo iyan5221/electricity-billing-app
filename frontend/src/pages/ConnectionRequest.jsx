@@ -10,7 +10,7 @@ function ConnectionRequest() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http://172.31.90.56:5000/api/connections', {
+    fetch('http://172.31.90.56:3000/api/connections', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
