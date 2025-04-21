@@ -8,7 +8,7 @@ function Notifications() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/notifications', {
+    fetch('http://3.91.175.161:5000/api/notifications', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
