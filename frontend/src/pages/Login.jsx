@@ -13,7 +13,7 @@ function Login() {
     setError(''); // clear previous errors
     console.log('Submitting login for:', email);
     try {
-      const res = await fetch('http://3.91.175.161:5000/api/auth/login', {
+      const res = await fetch('http://172.31.90.56:3000/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
