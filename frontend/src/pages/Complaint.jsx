@@ -10,7 +10,7 @@ function Complaint() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/complaints', {
+    fetch('http:/3.91.175.161:5000/api/complaints', {
       headers: { 'Authorization': 'Bearer ' + token }
     })
       .then(res => res.json())
