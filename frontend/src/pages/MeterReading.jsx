@@ -11,7 +11,7 @@ function MeterReading() {
   // Fetch user data (including bills) from the backend
   const fetchUserData = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/user/dashboard', {
+      const res = await fetch('http://3.91.175.161:5000/api/user/dashboard', {
         headers: { 'Authorization': 'Bearer ' + token }
       });
       const data = await res.json();
